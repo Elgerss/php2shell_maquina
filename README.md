@@ -64,32 +64,6 @@ El impacto depende de la versión de PHP, del uso de PHP-CGI, de la configuraci�
 - Ejecutar el servicio web con una cuenta con los permisos mínimos necesarios.
 - Revisar los registros del servidor para detectar solicitudes anormales y procesos inesperados iniciados por PHP.
 
-## 5. Comandos para subir a GitHub
-
-Desde la carpeta principal del proyecto, se pueden ejecutar los siguientes comandos:
-
-```bash
-# Crear el repositorio local
-git init
-
-# Cambiar el nombre de la rama principal
-git branch -M main
-
-# Añadir el README y las imágenes
-git add .
-
-# Crear el commit
-git commit -m "Añadir informe de práctica PHP2Shell"
-
-# Enlazar el repositorio de GitHub
-git remote add origin https://github.com/<usuario>/<repositorio>.git
-
-# Subir los archivos
-git push -u origin main
-```
-
-Antes de ejecutar `git push`, se debe crear el repositorio en GitHub y reemplazar `<usuario>/<repositorio>` por los datos reales. No se deben subir contraseñas, tokens ni otros datos privados.
-
 ## Evidencia de que la máquina está completa
 
 La siguiente captura muestra la evidencia de finalización de la máquina en TryHackMe:

@@ -24,9 +24,15 @@ Durante el reconocimiento se comprobó que el servicio web estaba funcionando en
 
 Para comprobar la vulnerabilidad se ejecutó el script `exploit.py` dentro del entorno de la sala. La prueba demostró que era posible ejecutar comandos en el servidor y obtener una respuesta asociada al usuario `www-data`, que es la cuenta utilizada normalmente por el servicio web.
 
+Para leer la flag dentro del entorno de la sala, se ejecuta el exploit indicando la URL local y el comando que muestra el contenido del archivo:
+
+```bash
+python3 exploit.py -u http://127.0.0.1:8088/ -c "cat /f"
+```
+
 ![Demostración de Explotación](assets/03_evidencia_flag.png)
 
-> **Nota de privacidad:** Por razones de privacidad y buenas prácticas académicas, no se muestra directamente la lectura de la flag ni las respuestas completas de TryHackMe. Esto evita revelar las soluciones de la sala y ayuda a prevenir el plagio. Las capturas se enfocan únicamente en demostrar que el exploit se ejecutó correctamente.
+> **Nota de privacidad:** Aunque el comando permite leer la flag, su valor no se muestra en este informe por razones de privacidad y buenas prácticas académicas. De esta forma se evita el plagio y no se revelan las respuestas de TryHackMe. La evidencia se enfoca únicamente en demostrar que el exploit se ejecutó correctamente.
 
 ## 3. ¿Cómo funciona esta vulnerabilidad? (CVE-2024-4577)
 
